@@ -4,12 +4,19 @@
 
 
 class OaepError(Exception):
-    pass
+    def __init__(self, msg):
+        super().__init__("OAEP Error Type: "+msg)
 
 
 class OaepEncryptionError(OaepError):
-    pass
+    def __init__(self, msg):
+        super().__init__("Encryption Error: "+msg)
 
 
 class OaepDecryptionError(OaepError):
-    pass
+    def __init__(self, msg):
+        super().__init__("Decryption Error: " + msg)
+
+
+if __name__ == "__main__":
+    raise OaepDecryptionError("decryption error")

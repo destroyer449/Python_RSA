@@ -13,14 +13,14 @@ def i2osp(integer, size=4):
 
 
 # RSA primitives
-def RSAEP(key, message):
+def rsaep(key, message):
     return pow(message, key[1], key[0])
 
 
-def RSADP(key, cipher):
+def rsadp(key, cipher):
     return pow(cipher, key[1], key[0])
 
 
 # signature primitives
-def RSAPS1(key, m):
+def rsaps1(key, m):
     return None
