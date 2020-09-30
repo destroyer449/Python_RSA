@@ -64,7 +64,7 @@ def is_prime(n):
                 return False
         return True
 
-    for i in range(8):  # number of trials
+    for _ in range(8):  # number of trials
         a = random.randrange(2, n)
         if trial_composite(a):
             return False
